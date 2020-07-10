@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Typist from 'react-typist';
 import { motion } from 'framer-motion';
+import colors from '@variables/colors';
 
 const StyledStory = styled(motion.article)``;
 
@@ -11,6 +12,7 @@ const StyledTypist = styled(Typist)`
 	text-align: center;
 	.Cursor {
 		display: inline-block;
+		color: ${colors.treePoppy};
 	}
 	.Cursor--blinking {
 		opacity: 1;
@@ -33,7 +35,17 @@ const StyledTypist = styled(Typist)`
 const Story: React.FunctionComponent = () => {
 	return (
 		<StyledStory initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 1.2 } }}>
-			<StyledTypist startDelay={1500} avgTypingDelay={50}>
+			<StyledTypist
+				startDelay={1500}
+				avgTypingDelay={50}
+				cursor={{
+					show: true,
+					blink: true,
+					element: '|',
+					hideWhenDone: true,
+					hideWhenDoneDelay: 3000
+				}}
+			>
 				Hi,
 				<Typist.Delay ms={500} /> I&apos;m Kevin.
 				<Typist.Delay ms={500} /> A frontend developer from the Netherlands. <br />
