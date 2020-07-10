@@ -1,6 +1,7 @@
 {
 	"name": "kevindelange",
 	"version": "0.1.0",
+	"author": "Kevin de Lange",
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
