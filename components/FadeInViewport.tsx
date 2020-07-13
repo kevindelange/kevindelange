@@ -5,7 +5,7 @@ import { motion, useAnimation } from 'framer-motion';
 const FadeInViewport: React.FunctionComponent = (props) => {
 	const { children } = props;
 	const controls = useAnimation();
-	const [ref, inView] = useInView();
+	const [ref, inView] = useInView({ triggerOnce: true, rootMargin: '-30% 0% 0% 0%' });
 
 	useEffect(() => {
 		if (inView) {

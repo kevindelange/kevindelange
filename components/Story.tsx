@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Typist from 'react-typist';
 import { motion } from 'framer-motion';
 import colors from '@variables/colors';
+import { toMedium } from '@utils/mediaQueries';
 
 const StyledStory = styled(motion.article)``;
 
@@ -10,6 +11,11 @@ const StyledTypist = styled(Typist)`
 	font-size: 3.6rem;
 	line-height: 1.5;
 	text-align: center;
+	max-width: 80vw;
+
+	${toMedium`
+	    font-size: 2rem;
+	`}
 	.Cursor {
 		display: inline-block;
 		color: ${colors.treePoppy};

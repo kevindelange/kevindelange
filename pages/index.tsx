@@ -7,7 +7,8 @@ import Picture from '@components/Picture';
 import ScrollDownIcon from '@components/ScrollDownIcon';
 import FadeInViewport from '@components/FadeInViewport';
 import Title from '@components/Title';
-import ToolsCloud from '@components/ToolsCloud';
+import Skills from '@components/Skills';
+import scrollToPage from '@utils/scrollToPage';
 
 interface IndexProps {
 	query: any;
@@ -24,19 +25,22 @@ const Index: NextPage<IndexProps> = () => {
 	return (
 		<>
 			<Header />
-			<Page>
+			<Page id="home">
 				<Picture />
 				<Story />
-				<ScrollDownIcon />
+				<ScrollDownIcon onClick={() => scrollToPage('skills')} />
 			</Page>
-			<Page>
+			<Page id="skills">
 				<FadeInViewport>
 					<Title>
-						Tools i&apos;ve worked with over the past {getWorkExperience()} years as a professional frontend developer.
+						The skillset that i&apos;ve aquired over the past {getWorkExperience()} years as a professional frontend developer.
 					</Title>
 				</FadeInViewport>
-				<ToolsCloud />
+				<FadeInViewport>
+					<Skills />
+				</FadeInViewport>
 			</Page>
+			<Page id="contact">contact</Page>
 		</>
 	);
 };

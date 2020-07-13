@@ -18,7 +18,8 @@
 		"paths": {
 			"@components/*": ["components/*"],
 			"@variables/*": ["variables/*"],
-			"@static/*": ["static/*"]
+			"@static/*": ["static/*"],
+			"@utils/*": ["utils/*"]
 		}
 	},
 	"exclude": ["node_modules"],
