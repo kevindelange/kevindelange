@@ -8,7 +8,7 @@ import ScrollDownIcon from '@components/ScrollDownIcon';
 import FadeInViewport from '@components/FadeInViewport';
 import Title from '@components/Title';
 import Skills from '@components/Skills';
-import scrollToPage from '@utils/scrollToPage';
+import SocialMedia from '@components/SocialMedia';
 
 interface IndexProps {
 	query: any;
@@ -33,14 +33,19 @@ const Index: NextPage<IndexProps> = () => {
 			<Page id="skills">
 				<FadeInViewport>
 					<Title>
-						The skillset that i&apos;ve aquired over the past {getWorkExperience()} years as a professional frontend developer.
+						The skillset that I&apos;ve aquired over the past {getWorkExperience()} years as a professional frontend developer.
 					</Title>
 				</FadeInViewport>
 				<FadeInViewport>
 					<Skills />
 				</FadeInViewport>
 			</Page>
-			<Page id="contact">contact</Page>
+			<Page id="contact">
+				<FadeInViewport>
+					<Title>Want to say hi?</Title>
+					<SocialMedia />
+				</FadeInViewport>
+			</Page>
 		</>
 	);
 };

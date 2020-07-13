@@ -19,8 +19,8 @@ const FadeInViewport: React.FunctionComponent = (props) => {
 			animate={controls}
 			initial="hidden"
 			variants={{
-				visible: { y: 0, opacity: 1 },
-				hidden: { y: 50, opacity: 0 }
+				visible: { y: 0, opacity: 1, transition: { delay: 0.2 } },
+				hidden: { y: 50, opacity: 0, transition: { delay: 0.2 } }
 			}}
 		>
 			{children}

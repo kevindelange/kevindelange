@@ -5,7 +5,7 @@ import skills from '@static/skills';
 import fonts from '@variables/fonts';
 import { toMedium } from '@utils/mediaQueries';
 
-const SkillList = styled.div`
+const SkillList = styled.article`
 	width: 80vw;
 	text-align: center;
 	margin-top: 6rem;
