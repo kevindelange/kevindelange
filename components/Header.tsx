@@ -20,9 +20,9 @@ const StyledHeader = styled.header`
 const NameBlock = styled.div`
 	display: flex;
 	align-items: center;
-	width: 100%;
 	${toMedium`
 	    flex-direction: column;
+	    width: 100%;
 	`}
 `;
 
