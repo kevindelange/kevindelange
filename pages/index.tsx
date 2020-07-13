@@ -28,7 +28,7 @@ const Index: NextPage<IndexProps> = () => {
 			<Page id="home">
 				<Picture />
 				<Story />
-				<ScrollDownIcon onClick={() => scrollToPage('skills')} />
+				<ScrollDownIcon />
 			</Page>
 			<Page id="skills">
 				<FadeInViewport>

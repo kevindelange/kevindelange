@@ -42,7 +42,7 @@ const ScrollDownIcon: React.FunctionComponent = (props) => {
 			initial={{ y: -300, opacity: 0 }}
 			animate={{ y: 0, opacity: 1 }}
 			transition={{ delay: 10, y: { type: 'spring', mass: 0.7, stiffness: 80 } }}
-			{...props}
+			onClick={() => scrollToPage('skills')}
 		>
 			<MotionWrapper animate={controls} onHoverStart={() => controls.stop()} onHoverEnd={() => controls.start(getAnimation())}>
 				<Icon icon={faChevronDown} />
