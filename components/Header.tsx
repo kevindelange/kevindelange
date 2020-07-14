@@ -5,6 +5,8 @@ import colors from '@variables/colors';
 import fonts from '@variables/fonts';
 import scrollToPage from '@utils/scrollToPage';
 import { toMedium } from '@utils/mediaQueries';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const StyledHeader = styled.header`
 	padding: 2rem 3rem;
@@ -33,6 +35,32 @@ const Name = styled(motion.div)`
 	text-transform: uppercase;
 	font-size: 1.8rem;
 	display: inline-block;
+`;
+
+const GitHub = styled(motion.a)`
+	font-size: 3rem;
+	display: inline-block;
+	color: ${colors.gray};
+	&:hover,
+	&:focus,
+	&:active {
+		color: ${colors.treePoppy};
+	}
+`;
+
+const Button = styled(motion.button)`
+	cursor: pointer;
+	transition: 0.2s color;
+	background-color: transparent;
+	color: ${colors.gray};
+	border: none;
+	text-transform: uppercase;
+	outline: none;
+	&:hover,
+	&:focus,
+	&:active {
+		color: ${colors.treePoppy};
+	}
 `;
 
 const Divider = styled(motion.div)`
@@ -69,23 +97,11 @@ const Nav = styled(motion.nav)`
 		margin: 0;
 		padding: 0;
 		list-style-type: none;
+		display: flex;
+		align-items: center;
 		li {
 			display: inline-block;
 			margin-right: 3rem;
-			button {
-				cursor: pointer;
-				transition: 0.2s color;
-				background-color: transparent;
-				color: ${colors.gray};
-				border: none;
-				text-transform: uppercase;
-				outline: none;
-				&:hover,
-				&:focus,
-				&:active {
-					color: ${colors.treePoppy};
-				}
-			}
 			&:last-child {
 				margin-right: 1.5rem;
 			}
@@ -157,19 +173,30 @@ const Header: React.FunctionComponent = () => {
 			>
 				<ul>
 					<li>
-						<button type="button" onClick={() => scrollToPage('home')}>
+						<Button initial={{ y: 0 }} whileHover={{ y: -3 }} type="button" onClick={() => scrollToPage('home')}>
 							Home
-						</button>
+						</Button>
 					</li>
 					<li>
-						<button type="button" onClick={() => scrollToPage('skills')}>
+						<Button initial={{ y: 0 }} whileHover={{ y: -3 }} type="button" onClick={() => scrollToPage('skills')}>
 							Skills
-						</button>
+						</Button>
 					</li>
 					<li>
-						<button type="button" onClick={() => scrollToPage('contact')}>
+						<Button initial={{ y: 0 }} whileHover={{ y: -3 }} type="button" onClick={() => scrollToPage('contact')}>
 							Contact
-						</button>
+						</Button>
+					</li>
+					<li>
+						<GitHub
+							initial={{ y: 0 }}
+							whileHover={{ y: -3 }}
+							href="https://github.com/kevindelange/"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<FontAwesomeIcon icon={faGithub} />
+						</GitHub>
 					</li>
 				</ul>
 			</Nav>

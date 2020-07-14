@@ -5,18 +5,22 @@ import fonts from '@variables/fonts';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import FadeInViewport from '@components/FadeInViewport';
+import { toMedium } from '@utils/mediaQueries';
 
 const SkillWrapper = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	margin-right: 1.5rem;
 	margin-bottom: 1.5rem;
 	padding: 1rem;
 	width: 100%;
 	position: relative;
 	background-color: rgba(0, 0, 0, 0.1);
 	border-radius: 0.5rem;
+	${toMedium`
+	    padding: 0.5rem 0.75rem;
+	    margin-bottom: 0.8rem;
+	`}
 `;
 
 const SkillInfill = styled(motion.div)`
@@ -37,6 +41,9 @@ const SkillName = styled(motion.div)`
 	transition: 0.4s color;
 	font-weight: 500;
 	color: white;
+	${toMedium`
+	    font-size: 1.4rem;
+	`}
 `;
 
 interface SkillProps {
@@ -68,7 +75,7 @@ const Skill: React.FunctionComponent<SkillProps> = (props) => {
 					variants={{
 						visible: {
 							x: 0,
-							transition: { delay: (index + 0.4) * 0.2 }
+							transition: { duration: 0.5, delay: (index + 0.4) * 0.2 }
 						},
 						hidden: { x: -50 }
 					}}

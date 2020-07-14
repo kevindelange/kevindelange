@@ -2,17 +2,16 @@ import styled from 'styled-components';
 import fonts from '@variables/fonts';
 import { toMedium } from '@utils/mediaQueries';
 
-const Title = styled.h1`
-	font-size: 3.6rem;
+const Paragraph = styled.p`
+	font-size: 1.8rem;
 	text-align: center;
 	width: 80vw;
-	font-family: ${fonts.montserrat};
-	font-weight: 700;
-	line-height: 1.5;
+	margin: 4rem 0;
+	font-family: ${fonts.roboto};
 
 	${toMedium`
-	    font-size: 2rem
+	    font-size: 1.6rem
 	`}
 `;
 
-export default Title;
+export default Paragraph;

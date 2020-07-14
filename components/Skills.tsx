@@ -2,10 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import skills from '@static/skills';
 import Skill from '@components/Skill';
+import { toMedium } from '@utils/mediaQueries';
 
 const SkillList = styled.article`
 	width: 60vw;
 	margin-top: 6rem;
+	${toMedium`
+	    margin-top: 3rem;
+	`}
 `;
 
 const Skills: React.FunctionComponent = () => {

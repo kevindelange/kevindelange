@@ -9,6 +9,7 @@ import FadeInViewport from '@components/FadeInViewport';
 import Title from '@components/Title';
 import Skills from '@components/Skills';
 import SocialMedia from '@components/SocialMedia';
+import Paragraph from '@components/Paragraph';
 
 interface IndexProps {
 	query: any;
@@ -41,6 +42,11 @@ const Index: NextPage<IndexProps> = () => {
 			<Page id="contact">
 				<FadeInViewport>
 					<Title>Want to say hi?</Title>
+				</FadeInViewport>
+				<FadeInViewport>
+					<Paragraph>Get in touch by sending me a message on LinkedIn or send me an email.</Paragraph>
+				</FadeInViewport>
+				<FadeInViewport>
 					<SocialMedia />
 				</FadeInViewport>
 			</Page>

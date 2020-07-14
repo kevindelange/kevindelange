@@ -7,6 +7,11 @@ import { toMedium } from '@utils/mediaQueries';
 
 const StyledStory = styled(motion.article)``;
 
+const Marked = styled.span`
+	font-weight: 500;
+	font-style: italic;
+`;
+
 const StyledTypist = styled(Typist)`
 	font-size: 3.6rem;
 	line-height: 1.5;
@@ -41,21 +46,12 @@ const StyledTypist = styled(Typist)`
 const Story: React.FunctionComponent = () => {
 	return (
 		<StyledStory initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 1.8 } }}>
-			<StyledTypist
-				startDelay={1500}
-				avgTypingDelay={50}
-				cursor={{
-					show: true,
-					blink: true,
-					element: '|',
-					hideWhenDone: true,
-					hideWhenDoneDelay: 3000
-				}}
-			>
+			<StyledTypist startDelay={1500} avgTypingDelay={50}>
 				Hi,
 				<Typist.Delay ms={500} /> I&apos;m Kevin.
 				<Typist.Delay ms={500} /> A frontend developer from the Netherlands. <br />
-				<Typist.Delay ms={500} /> I love to create beautiful applications with new techniques.
+				<Typist.Delay ms={500} /> I have a passion for writing <Marked>clean code</Marked> and building{' '}
+				<Marked>stunning apps</Marked>.
 			</StyledTypist>
 		</StyledStory>
 	);
