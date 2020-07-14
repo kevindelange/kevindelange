@@ -40,7 +40,7 @@ const StyledTypist = styled(Typist)`
 
 const Story: React.FunctionComponent = () => {
 	return (
-		<StyledStory initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 1.2 } }}>
+		<StyledStory initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 1.8 } }}>
 			<StyledTypist
 				startDelay={1500}
 				avgTypingDelay={50}

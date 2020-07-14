@@ -35,6 +35,8 @@ const SkillName = styled(motion.div)`
 	position: relative;
 	z-index: 1;
 	transition: 0.4s color;
+	font-weight: 500;
+	color: white;
 `;
 
 interface SkillProps {
@@ -58,17 +60,17 @@ const Skill: React.FunctionComponent<SkillProps> = (props) => {
 	}, [controls, inView]);
 
 	return (
-		<FadeInViewport>
+		<FadeInViewport index={index}>
 			<SkillWrapper ref={ref}>
 				<SkillName
 					animate={controls}
 					initial="hidden"
 					variants={{
 						visible: {
-							color: 'white',
+							x: 0,
 							transition: { delay: (index + 0.4) * 0.2 }
 						},
-						hidden: { color: 'black' }
+						hidden: { x: -50 }
 					}}
 				>
 					{skill.name}

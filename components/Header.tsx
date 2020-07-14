@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import colors from '@variables/colors';
 import fonts from '@variables/fonts';
 import scrollToPage from '@utils/scrollToPage';
@@ -15,6 +15,7 @@ const StyledHeader = styled.header`
 	justify-content: space-between;
 	align-items: center;
 	background-color: rgba(255, 255, 255, 0.9);
+	z-index: 10;
 `;
 
 const NameBlock = styled.div`
@@ -96,18 +97,64 @@ const Nav = styled(motion.nav)`
 `;
 
 const Header: React.FunctionComponent = () => {
+	const controls = useAnimation();
+	controls.start('visible');
 	return (
 		<StyledHeader>
 			<NameBlock>
-				<Name initial={{ x: -50, opacity: 0 }} animate={{ x: 0, opacity: 1 }}>
+				<Name
+					animate={controls}
+					initial="hidden"
+					variants={{
+						visible: {
+							x: 0,
+							opacity: 1,
+							transition: { duration: 0.3 }
+						},
+						hidden: { x: -50, opacity: 0 }
+					}}
+				>
 					Kevin de Lange
 				</Name>
-				<Divider initial={{ x: -50, opacity: 0 }} animate={{ x: 0, opacity: 1, transition: { delay: 0.2 } }} />
-				<Role initial={{ x: -50, opacity: 0 }} animate={{ x: 0, opacity: 1, transition: { delay: 0.4 } }}>
+				<Divider
+					animate={controls}
+					initial="hidden"
+					variants={{
+						visible: {
+							x: 0,
+							opacity: 1,
+							transition: { delay: 0.3, duration: 0.3 }
+						},
+						hidden: { x: -50, opacity: 0 }
+					}}
+				/>
+				<Role
+					animate={controls}
+					initial="hidden"
+					variants={{
+						visible: {
+							x: 0,
+							opacity: 1,
+							transition: { delay: 0.6, duration: 0.3 }
+						},
+						hidden: { x: -50, opacity: 0 }
+					}}
+				>
 					Frontend Developer
 				</Role>
 			</NameBlock>
-			<Nav>
+			<Nav
+				animate={controls}
+				initial="hidden"
+				variants={{
+					visible: {
+						x: 0,
+						opacity: 1,
+						transition: { delay: 0.9, duration: 0.3 }
+					},
+					hidden: { x: 50, opacity: 0 }
+				}}
+			>
 				<ul>
 					<li>
 						<button type="button" onClick={() => scrollToPage('home')}>
