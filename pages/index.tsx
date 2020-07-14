@@ -36,9 +36,7 @@ const Index: NextPage<IndexProps> = () => {
 						The skillset that I&apos;ve aquired over the past {getWorkExperience()} years as a professional frontend developer.
 					</Title>
 				</FadeInViewport>
-				<FadeInViewport>
-					<Skills />
-				</FadeInViewport>
+				<Skills />
 			</Page>
 			<Page id="contact">
 				<FadeInViewport>
