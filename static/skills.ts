@@ -1,95 +1,43 @@
 const skills = [
 	{
-		name: 'Adobe Illustrator',
-		bold: false
-	},
-	{
-		name: 'Adobe Photoshop',
-		bold: false
-	},
-	{
 		name: 'Angular',
-		bold: true
-	},
-	{
-		name: 'AngularJS',
-		bold: false
-	},
-	{
-		name: 'Azure DevOps',
-		bold: false
-	},
-	{
-		name: 'Bitbucket',
-		bold: false
-	},
-	{
-		name: 'Confluence',
-		bold: false
+		percentage: 90
 	},
 	{
 		name: 'Cordova',
-		bold: true
-	},
-	{
-		name: 'GIT',
-		bold: false
+		percentage: 90
 	},
 	{
 		name: 'Ionic',
-		bold: true
+		percentage: 90
 	},
 	{
 		name: 'Javascript',
-		bold: true
-	},
-	{
-		name: 'Jira',
-		bold: false
-	},
-	{
-		name: 'jQuery',
-		bold: false
+		percentage: 90
 	},
 	{
 		name: 'Material Design',
-		bold: true
+		percentage: 80
 	},
 	{
 		name: 'NextJS',
-		bold: false
+		percentage: 60
 	},
 	{
 		name: 'React',
-		bold: true
-	},
-	{
-		name: 'Redux',
-		bold: false
-	},
-	{
-		name: 'REST',
-		bold: false
-	},
-	{
-		name: 'RxJS',
-		bold: true
+		percentage: 60
 	},
 	{
 		name: 'SCSS',
-		bold: true
-	},
-	{
-		name: 'SVN',
-		bold: false
+		percentage: 90
 	},
 	{
 		name: 'Typescript',
-		bold: true
+		percentage: 80
 	},
 	{
 		name: 'Vue.js',
-		bold: false
+		percentage: 50
 	}
 ];
 

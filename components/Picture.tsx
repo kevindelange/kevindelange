@@ -16,7 +16,7 @@ const StyledPicture = styled(motion.div)`
 
 const Picture: React.FunctionComponent = () => {
 	return (
-		<StyledPicture initial={{ y: -300, opacity: 0 }} animate={{ y: 0, opacity: 1, transition: { delay: 1 } }}>
+		<StyledPicture initial={{ y: -300, opacity: 0 }} animate={{ y: 0, opacity: 1, transition: { delay: 1.5 } }}>
 			<img src="images/me.jpeg" alt="" />
 		</StyledPicture>
 	);

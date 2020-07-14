@@ -26,7 +26,7 @@ const Icon = styled(FontAwesomeIcon)`
 	font-size: 3rem;
 `;
 
-const ScrollDownIcon: React.FunctionComponent = (props) => {
+const ScrollDownIcon: React.FunctionComponent = () => {
 	const controls = useAnimation();
 	const getAnimation = (delay?: boolean) => {
 		return {

@@ -2,13 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faAt } from '@fortawesome/free-solid-svg-icons';
 import colors from '@variables/colors';
+import { toMedium } from '@utils/mediaQueries';
 
 const Wrapper = styled(motion.article)`
-	margin-top: 6rem;
+	margin-top: 5rem;
 	text-align: center;
+	${toMedium`
+	    margin-top: 3rem;
+	`}
 `;
 
 const MotionLink = styled(motion.a)`
@@ -39,9 +43,6 @@ const SocialMedia: React.FunctionComponent = () => {
 			</MotionLink>
 			<MotionLink initial={{ scale: 1 }} whileHover={{ scale: 1.3 }} href="mailto:hi@kevindelange.dev" target="_blank">
 				<Icon icon={faAt} />
-			</MotionLink>
-			<MotionLink initial={{ scale: 1 }} whileHover={{ scale: 1.3 }} href="https://github.com/kevindelange/" target="_blank">
-				<Icon icon={faGithub} />
 			</MotionLink>
 		</Wrapper>
 	);
