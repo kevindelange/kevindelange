@@ -10,6 +10,7 @@ import Title from '@components/Title';
 import Skills from '@components/Skills';
 import SocialMedia from '@components/SocialMedia';
 import Paragraph from '@components/Paragraph';
+import Head from 'next/head';
 
 interface IndexProps {
 	query: any;
@@ -25,6 +26,9 @@ const Index: NextPage<IndexProps> = () => {
 
 	return (
 		<>
+			<Head>
+				<title>Kevin de Lange - Frontend Developer</title>
+			</Head>
 			<Header />
 			<Page id="home">
 				<Picture />

@@ -13,7 +13,7 @@ const StyledHeader = styled.header`
 	display: flex;
 	position: fixed;
 	left: 0;
-	width: 100vw;
+	width: 100%;
 	justify-content: space-between;
 	align-items: center;
 	background-color: rgba(255, 255, 255, 0.9);
@@ -41,6 +41,7 @@ const GitHub = styled(motion.a)`
 	font-size: 3rem;
 	display: inline-block;
 	color: ${colors.gray};
+	outline: none;
 	&:hover,
 	&:focus,
 	&:active {
@@ -103,7 +104,7 @@ const Nav = styled(motion.nav)`
 			display: inline-block;
 			margin-right: 3rem;
 			&:last-child {
-				margin-right: 1.5rem;
+				margin-right: 0;
 			}
 		}
 	}
@@ -194,6 +195,7 @@ const Header: React.FunctionComponent = () => {
 							href="https://github.com/kevindelange/"
 							target="_blank"
 							rel="noreferrer"
+							aria-label="Github"
 						>
 							<FontAwesomeIcon icon={faGithub} />
 						</GitHub>

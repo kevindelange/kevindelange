@@ -38,10 +38,24 @@ const Icon = styled(FontAwesomeIcon)`
 const SocialMedia: React.FunctionComponent = () => {
 	return (
 		<Wrapper>
-			<MotionLink initial={{ scale: 1 }} whileHover={{ scale: 1.3 }} href="https://www.linkedin.com/in/kevindelange/" target="_blank">
+			<MotionLink
+				initial={{ scale: 1 }}
+				whileHover={{ scale: 1.3 }}
+				href="https://www.linkedin.com/in/kevindelange/"
+				target="_blank"
+				rel="noreferrer"
+				aria-label="LinkedIn"
+			>
 				<Icon icon={faLinkedinIn} />
 			</MotionLink>
-			<MotionLink initial={{ scale: 1 }} whileHover={{ scale: 1.3 }} href="mailto:hi@kevindelange.dev" target="_blank">
+			<MotionLink
+				initial={{ scale: 1 }}
+				whileHover={{ scale: 1.3 }}
+				href="mailto:hi@kevindelange.dev"
+				target="_blank"
+				rel="noreferrer"
+				aria-label="Email"
+			>
 				<Icon icon={faAt} />
 			</MotionLink>
 		</Wrapper>
