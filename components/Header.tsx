@@ -41,6 +41,7 @@ const GitHub = styled(motion.a)`
 	font-size: 3rem;
 	display: inline-block;
 	color: ${colors.gray};
+	outline: none;
 	&:hover,
 	&:focus,
 	&:active {
@@ -194,6 +195,7 @@ const Header: React.FunctionComponent = () => {
 							href="https://github.com/kevindelange/"
 							target="_blank"
 							rel="noreferrer"
+							aria-label="Github"
 						>
 							<FontAwesomeIcon icon={faGithub} />
 						</GitHub>
