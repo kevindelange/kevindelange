@@ -1,8 +1,9 @@
 {
   "name": "Kevin de Lange",
+  "short_name": "Kevin",
   "theme_color": "#ff9c1b",
   "background_color": "#ff9c1b",
-  "display": "browser",
+  "display": "standalone",
   "orientation": "portrait",
   "Scope": "/",
   "start_url": "/",
