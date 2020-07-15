@@ -43,6 +43,7 @@ const SocialMedia: React.FunctionComponent = () => {
 				whileHover={{ scale: 1.3 }}
 				href="https://www.linkedin.com/in/kevindelange/"
 				target="_blank"
+				rel="noreferrer"
 				aria-label="LinkedIn"
 			>
 				<Icon icon={faLinkedinIn} />
@@ -52,6 +53,7 @@ const SocialMedia: React.FunctionComponent = () => {
 				whileHover={{ scale: 1.3 }}
 				href="mailto:hi@kevindelange.dev"
 				target="_blank"
+				rel="noreferrer"
 				aria-label="Email"
 			>
 				<Icon icon={faAt} />
