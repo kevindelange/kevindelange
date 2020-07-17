@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import fonts from '@variables/fonts';
-import { toMedium } from '@utils/mediaQueries';
+import { toLarge } from '@utils/mediaQueries';
 
 const Title = styled.h1`
 	font-size: 3.6rem;
@@ -10,7 +10,7 @@ const Title = styled.h1`
 	font-weight: 700;
 	line-height: 1.5;
 
-	${toMedium`
+	${toLarge`
 	    font-size: 2rem
 	`}
 `;

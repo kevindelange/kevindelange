@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Typist from 'react-typist';
 import { motion } from 'framer-motion';
 import colors from '@variables/colors';
-import { toMedium } from '@utils/mediaQueries';
+import { toLarge } from '@utils/mediaQueries';
 
 const StyledStory = styled(motion.article)``;
 
@@ -16,9 +16,9 @@ const StyledTypist = styled(Typist)`
 	font-size: 3.6rem;
 	line-height: 1.5;
 	text-align: center;
-	max-width: 80vw;
+	max-width: 78vw;
 
-	${toMedium`
+	${toLarge`
 	    font-size: 2rem;
 	`}
 	.Cursor {
@@ -50,8 +50,7 @@ const Story: React.FunctionComponent = () => {
 				Hi,
 				<Typist.Delay ms={500} /> I&apos;m Kevin.
 				<Typist.Delay ms={500} /> A frontend developer from the Netherlands. <br />
-				<Typist.Delay ms={500} /> I have a passion for writing <Marked>clean code</Marked> and building{' '}
-				<Marked>stunning apps</Marked>.
+				<Typist.Delay ms={500} /> I have a passion for building <Marked>stunning apps</Marked>.
 			</StyledTypist>
 		</StyledStory>
 	);

@@ -5,12 +5,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faAt } from '@fortawesome/free-solid-svg-icons';
 import colors from '@variables/colors';
-import { toMedium } from '@utils/mediaQueries';
+import { toLarge } from '@utils/mediaQueries';
 
 const Wrapper = styled(motion.article)`
 	margin-top: 5rem;
 	text-align: center;
-	${toMedium`
+	${toLarge`
 	    margin-top: 3rem;
 	`}
 `;

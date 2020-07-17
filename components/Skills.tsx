@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import skills from '@static/skills';
 import Skill from '@components/Skill';
-import { toMedium } from '@utils/mediaQueries';
+import { toLarge } from '@utils/mediaQueries';
 
 const SkillList = styled.article`
 	width: 60vw;
 	margin-top: 6rem;
-	${toMedium`
+	${toLarge`
 	    margin-top: 3rem;
 	`}
 `;

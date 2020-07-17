@@ -12,3 +12,8 @@ body {
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
 }
+button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.6rem;
+}

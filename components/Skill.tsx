@@ -4,10 +4,9 @@ import colors from '@variables/colors';
 import fonts from '@variables/fonts';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import FadeInViewport from '@components/FadeInViewport';
-import { toMedium } from '@utils/mediaQueries';
+import { toLarge } from '@utils/mediaQueries';
 
-const SkillWrapper = styled.div`
+const SkillWrapper = styled(motion.div)`
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
@@ -17,7 +16,7 @@ const SkillWrapper = styled.div`
 	position: relative;
 	background-color: rgba(0, 0, 0, 0.1);
 	border-radius: 0.5rem;
-	${toMedium`
+	${toLarge`
 	    padding: 0.5rem 0.75rem;
 	    margin-bottom: 0.8rem;
 	`}
@@ -41,7 +40,7 @@ const SkillName = styled(motion.div)`
 	transition: 0.4s color;
 	font-weight: 500;
 	color: white;
-	${toMedium`
+	${toLarge`
 	    font-size: 1.4rem;
 	`}
 `;
@@ -58,44 +57,53 @@ const Skill: React.FunctionComponent<SkillProps> = (props) => {
 	const { skill, index } = props;
 
 	const controls = useAnimation();
-	const [ref, inView] = useInView({ triggerOnce: true, rootMargin: '0% 0% -8% 0%' });
+	const [ref, inView] = useInView({ triggerOnce: true });
+
+	const baseDelay = index * 0.2;
 
 	useEffect(() => {
 		if (inView) {
 			controls.start('visible');
 		}
-	}, [controls, inView]);
+	}, [inView]);
 
 	return (
-		<FadeInViewport index={index}>
-			<SkillWrapper ref={ref}>
-				<SkillName
-					animate={controls}
-					initial="hidden"
-					variants={{
-						visible: {
-							x: 0,
-							transition: { duration: 0.5, delay: (index + 0.4) * 0.2 }
-						},
-						hidden: { x: -50 }
-					}}
-				>
-					{skill.name}
-				</SkillName>
-				<SkillInfill
-					animate={controls}
-					initial="hidden"
-					variants={{
-						visible: {
-							width: `${skill.percentage}%`,
-							opacity: 1,
-							transition: { duration: 1, delay: index * 0.2, ease: 'easeInOut' }
-						},
-						hidden: { width: 0, opacity: 0 }
-					}}
-				/>
-			</SkillWrapper>
-		</FadeInViewport>
+		<SkillWrapper
+			ref={ref}
+			animate={controls}
+			initial="hidden"
+			variants={{
+				visible: { y: 0, opacity: 1 },
+				hidden: { y: 75, opacity: 0 }
+			}}
+			transition={{
+				delay: baseDelay,
+				delayChildren: baseDelay + 0.1,
+				staggerChildren: 0.1
+			}}
+		>
+			<SkillName
+				variants={{
+					visible: {
+						x: 0,
+						transition: { duration: 0.5 }
+					},
+					hidden: { x: -50 }
+				}}
+			>
+				{skill.name}
+			</SkillName>
+			<SkillInfill
+				variants={{
+					visible: {
+						width: `${skill.percentage}%`,
+						opacity: 1,
+						transition: { duration: 1, ease: 'easeInOut' }
+					},
+					hidden: { width: 0, opacity: 0 }
+				}}
+			/>
+		</SkillWrapper>
 	);
 };
 

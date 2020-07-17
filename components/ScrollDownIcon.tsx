@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import colors from '@variables/colors';
 import scrollToPage from '@utils/scrollToPage';
+import { toLarge } from '@utils/mediaQueries';
 
 const Wrapper = styled(motion.div)`
 	position: absolute;
@@ -12,6 +13,9 @@ const Wrapper = styled(motion.div)`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	${toLarge`
+	    bottom: 4rem;
+	`}
 `;
 
 const MotionWrapper = styled(motion.div)`

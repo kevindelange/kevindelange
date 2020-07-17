@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { toLarge } from '@utils/mediaQueries';
 
 const StyledPicture = styled(motion.div)`
 	height: 14rem;
@@ -12,6 +13,10 @@ const StyledPicture = styled(motion.div)`
 		width: 100%;
 		height: 100%;
 	}
+
+	${toLarge`
+	    margin-bottom: 3rem;
+	`}
 `;
 
 const Picture: React.FunctionComponent = () => {

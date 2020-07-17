@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import colors from '@variables/colors';
-import { toMedium } from '@utils/mediaQueries';
+import { toLarge } from '@utils/mediaQueries';
 
 const Page = styled.section`
 	min-height: 100vh;
@@ -10,8 +10,8 @@ const Page = styled.section`
 	align-items: center;
 	justify-content: center;
 	background: linear-gradient(to bottom, white 60%, ${colors.gallery});
-	${toMedium`
-	    padding: 3rem 0;
+	${toLarge`
+	    padding: 8rem 0 3rem;
 	`};
 `;
 

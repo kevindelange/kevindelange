@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import fonts from '@variables/fonts';
-import { toMedium } from '@utils/mediaQueries';
+import { toLarge } from '@utils/mediaQueries';
 
 const Paragraph = styled.p`
 	font-size: 1.8rem;
@@ -9,7 +9,7 @@ const Paragraph = styled.p`
 	margin: 4rem 0;
 	font-family: ${fonts.roboto};
 
-	${toMedium`
+	${toLarge`
 	    font-size: 1.6rem
 	`}
 `;
